@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Publication</title>
-        <style>
+    <style>
 div {
     padding-top: 20px;
     padding-left: 20px;
 }
 </style>
 </head>
+
 <body>
 <div>
-<b>{{ p.title }}</b>
-<br>
-<i>(p. #{{ p.id }}; updated at {{ p.updated_at }})</i>
-<br><br>
-{{ p.content }}
+    <b>{{ p.title }}</b>
+    <br>
+    <i>(p. #{{ p.id }}; updated at {{ p.updated_at }})</i>
+    <br><br>
+    {{ p.content }}
 </div>
 </body>
+
 </html>

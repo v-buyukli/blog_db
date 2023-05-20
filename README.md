@@ -1,24 +1,26 @@
-# exchange_rates
+# Blog
 ____
 **Get started**
 
-Clone repository
-Install requirements:
+
+1. Clone repository
+
+2. Install requirements:
 
     `pip install -r requirements.txt`
 
-Migrate command:
+3. Migrate command:
 
     `python manage.py migrate`
 
-Start a redis via docker:
+4. (optional) Insert blog publications into db (default = 10 publications):
+
+    `python manage.py generate_publications`
+
+5. Start a redis via docker:
 
     `docker run -p 6379:6379 -it redis/redis-stack:latest` 
 
-Runserver command:
+6. Runserver command:
 
     `python manage.py runserver`
-
-
-
- python manage.py generate_publications
