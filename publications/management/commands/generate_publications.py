@@ -13,7 +13,7 @@ class Command(BaseCommand):
         publications = [
             Publication(
                 title=faker.sentence().replace(".", ""),
-                content=faker.text(),
+                content=faker.text(1000),
             )
             for _ in range(publications_count)
         ]

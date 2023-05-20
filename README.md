@@ -18,3 +18,7 @@ Start a redis via docker:
 Runserver command:
 
     `python manage.py runserver`
+
+
+
+ python manage.py generate_publications
