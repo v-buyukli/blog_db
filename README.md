@@ -19,7 +19,7 @@ ____
 
 5. Start a redis via docker:
 
-    `docker run -p 6379:6379 -it redis/redis-stack:latest` 
+    `docker run -p 6379:6379 redis` 
 
 6. Runserver command:
 
