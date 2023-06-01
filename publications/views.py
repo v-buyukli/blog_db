@@ -1,9 +1,6 @@
-# import time
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-from django.views.decorators.cache import cache_page
 
 from publications.models import Publication
 from publications.forms import PublicationForm
@@ -31,11 +28,9 @@ def get_publication(request):
     return render(request, "publication.html", context)
 
 
-@cache_page(60 * 15)
 def publication_view(request, p_id):
     try:
         p = Publication.objects.get(id=p_id)
     except Publication.DoesNotExist:
         return HttpResponseRedirect(reverse("publication"))
-    # time.sleep(3)
     return render(request, "publication_view.html", {"p": p})
