@@ -1,26 +1,27 @@
-# Blog
+# blog2.0
 ____
 **Get started**
 
-
-1. Clone repository
-
-2. Install requirements:
+- Clone repository
+- Install requirements:
 
     `pip install -r requirements.txt`
 
-3. Migrate command:
+- Create and fill `.env` file, where `POSTGRES_NAME`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_HOST`, `POSTGRES_PORT` are your settings.  
+Example: `.env.example`. You can use the variables copied from there for testing.
+- Start a postgres instance via docker:
+
+    `docker run -p 5432:5432 -e POSTGRES_PASSWORD=password postgres`,  
+where `password` is your `POSTGRES_PASSWORD`. 
+
+- Migrate command:
 
     `python manage.py migrate`
 
-4. (optional) Insert blog publications into db (default = 10 publications):
+- Insert blog publications into db (default = 10 publications):
 
     `python manage.py generate_publications`
 
-5. Start a redis via docker:
-
-    `docker run -p 6379:6379 redis` 
-
-6. Runserver command:
+- Runserver command:
 
     `python manage.py runserver`
